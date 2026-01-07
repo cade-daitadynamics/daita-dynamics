@@ -1,0 +1,3 @@
+module.exports=[27572,a=>{"use strict";var b=a.i(7997);let c="Daita Dynamics | AI & Automation for B2B Services",d="We help B2B service businesses unlock AI, automation, and smarter data strategies without the overwhelm.";function e({children:a}){return(0,b.jsx)("html",{lang:"en",className:"scroll-smooth",children:(0,b.jsx)("body",{className:"min-h-screen bg-slate-50 text-slate-800 antialiased",children:a})})}a.s(["default",()=>e,"metadata",0,{title:c,description:d,openGraph:{title:c,description:d,type:"website"}}],27572)}];
+
+//# sourceMappingURL=src_app_layout_tsx_cc8184fa._.js.map

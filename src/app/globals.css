@@ -1,0 +1,162 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Vibrant gradient palette */
+  --color-brand-purple-deep: #5B21B6;
+  --color-brand-purple: #7C3AED;
+  --color-brand-purple-light: #A78BFA;
+  --color-brand-magenta: #DB2777;
+  --color-brand-magenta-light: #F472B6;
+  --color-brand-coral: #F43F5E;
+  --color-brand-coral-light: #FB7185;
+  --color-brand-orange: #F97316;
+  --color-brand-orange-light: #FB923C;
+  --color-brand-amber: #F59E0B;
+  --color-brand-amber-light: #FBBF24;
+  --color-brand-cyan: #06B6D4;
+  --color-brand-cyan-light: #67E8F9;
+  --color-brand-cyan-soft: #CFFAFE;
+
+  /* Slate colors */
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+  --color-slate-950: #020617;
+
+  /* Font families */
+  --font-display: 'Clash Display', system-ui, sans-serif;
+  --font-body: 'Satoshi', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-glow: 0 0 40px -10px rgba(124, 58, 237, 0.3);
+  --shadow-glow-lg: 0 0 60px -15px rgba(124, 58, 237, 0.4);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+:root {
+  --font-clash: 'Clash Display', system-ui, sans-serif;
+  --font-satoshi: 'Satoshi', system-ui, sans-serif;
+
+  /* Gradient colors - Purple only */
+  --gradient-start: #7C3AED;
+  --gradient-mid1: #8B5CF6;
+  --gradient-mid2: #A78BFA;
+  --gradient-mid3: #8B5CF6;
+  --gradient-end: #7C3AED;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-satoshi);
+    background-color: #FAFAFA;
+    color: #1E293B;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-clash);
+    font-weight: 600;
+  }
+
+  ::selection {
+    background: rgba(124, 58, 237, 0.2);
+    color: #5B21B6;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid1) 25%, var(--gradient-mid2) 50%, var(--gradient-mid3) 75%, var(--gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-noise {
+    position: relative;
+  }
+
+  .bg-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+
+  .container-tight {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-tight {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: animateIn 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes animateIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
