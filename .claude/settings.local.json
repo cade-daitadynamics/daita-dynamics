@@ -3,7 +3,10 @@
     "allow": [
       "Bash(npm install:*)",
       "Bash(npx tailwindcss init -p)",
-      "Bash(git worktree:*)"
+      "Bash(git worktree:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npx next lint)"
     ]
   }
 }

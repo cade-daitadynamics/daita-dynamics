@@ -145,7 +145,7 @@ self.__SERVER_FILES_MANIFEST={
       "isExperimentalCompile": false
     }
   },
-  "appDir": "/Users/pop/projects/daita-dynamics",
+  "appDir": "/Users/cadedannels/code/daita-dynamics",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

@@ -17,8 +17,8 @@ export const siteContent = {
 
   hero: {
     headline: ['Feeling left behind by AI?', "You're in the right place."],
-    description: 'We help B2B service businesses unlock AI, automation, and smarter data strategies without the overwhelm.',
-    cta: { label: 'Book a Free Strategy Call', href: '#contact' },
+    description: 'We help growing B2B companies unlock AI, automation, and smarter data strategies without the overwhelm.',
+    cta: { label: 'Get Your AI Opportunity Assessment', href: '#contact' },
     trustBadges: [
       '100% Satisfaction guaranteed',
       'Custom-to-you',
@@ -36,6 +36,7 @@ export const siteContent = {
     paragraphs: [
       'Most business owners can feel it. The pressure to "do something" with AI.',
       "Everyone's talking about AI but between running your company, managing your team, and staying profitable, you're unsure where to start, or if it's even for you.",
+      "You know you need to scale, but adding more people isn't always the answer.",
       'We get it.',
       'At Daita Dynamics, we walk into your business, roll up our sleeves, and show you exactly where AI, automation, or smarter data can help you right now and what it takes to scale it later.',
       'We give you the clarity to act, the strategy to move forward, and the confidence that you\'re not just keeping up but you\'re setting the pace.',
@@ -43,11 +44,40 @@ export const siteContent = {
     closingStatement: "You're not behind. You just need the right guide.",
   },
 
+  difference: {
+    sectionTitle: 'How We\'re Different',
+    headline: 'AI built on YOUR business, not generic prompts',
+    description: 'Most AI tools give everyone the same generic answers. We build systems infused with your data, processes, and philosophy.',
+    comparison: [
+      {
+        type: 'generic' as const,
+        title: 'Generic AI Tools',
+        points: [
+          'Same answers for everyone',
+          'No context about your business',
+          'Sounds like a robot',
+          'One-size-fits-all approach',
+        ],
+      },
+      {
+        type: 'daita' as const,
+        title: 'Daita Dynamics AI',
+        points: [
+          'Built on YOUR proprietary data',
+          'Understands your processes & frameworks',
+          'Proactive AI that works inside your workflows',
+          'Custom to your business philosophy',
+        ],
+      },
+    ],
+    result: 'The result? AI that works like an extension of your team, not a generic chatbot.',
+  },
+
   approach: {
     sectionTitle: 'The Daita Dynamics Approach',
     subtitle: 'Your guide to AI success',
-    description: 'Our phased approach helps small businesses adopt AI with clarity and confidence. No overwhelm, just real progress.',
-    cta: { label: 'Get started', href: '#contact' },
+    description: 'Our phased approach helps growing businesses adopt AI with clarity and confidence. No overwhelm, just real progress.',
+    cta: { label: 'Get Your Assessment', href: '#contact' },
     ctaQuestion: 'Want to see what this approach looks like for your business?',
     phases: [
       {
@@ -82,16 +112,31 @@ export const siteContent = {
         title: 'Data',
         icon: 'data',
         description: "We help you make sense of your existing data by cleaning, connecting, and structuring it in ways that support smarter decisions. Whether it's dashboards, reporting, or organized data flows, we surface insights that matter without needing to change everything.",
+        useCases: [
+          'Transform 100+ spreadsheets into real-time dashboards',
+          'Build searchable knowledge bases from scattered documents',
+          'Create automated reporting that updates itself',
+        ],
       },
       {
         title: 'Automation',
         icon: 'automation',
         description: 'From sending invoices to updating records or syncing tools, we automate the repetitive tasks that slow you down. Our automations are tailored to your work so your team can focus on what really moves the needle.',
+        useCases: [
+          'Internal chatbots trained on your SOPs for instant employee answers',
+          'Automated lead scraping, research, and qualification pipelines',
+          'Invoice processing and record syncing without manual entry',
+        ],
       },
       {
         title: 'AI',
         icon: 'ai',
         description: "We make AI practical by weaving it into your processes in useful and easy-to-understand ways. That can include smart recommendations, summaries, or forecasts. Everything is designed to support your goals, not just add noise.",
+        useCases: [
+          'Search hundreds of LinkedIn profiles for recruiting in seconds',
+          'AI-powered content that matches your brand voice',
+          'Smart recommendations based on your business data',
+        ],
       },
     ],
   },
@@ -99,7 +144,7 @@ export const siteContent = {
   stories: {
     headline: 'Daita Dynamics in practice',
     description: 'See how Daita Dynamics has helped businesses across industries to unlock AI, automation and smarter data in their day-to-day operations.',
-    cta: { label: 'Book a Call', href: '#contact' },
+    cta: { label: 'Get Your Assessment', href: '#contact' },
     items: [
       {
         title: 'Turning 100 Excel spreadsheets into automated dashboards for faster decisions',
@@ -148,10 +193,10 @@ export const siteContent = {
     headline: 'Our story',
     tagline: 'Built on a simple belief: technology should support people, not overwhelm them.',
     paragraphs: [
-      'We started this company after seeing one challenge come up again and again: small businesses are buried in manual work, disconnected tools, and time-consuming workarounds.',
-      "At the same time, AI and automation are evolving fast. But for many small businesses, these tools still feel out of reach. Their time is limited, they rarely have space to explore what's possible and they often lack the resources or technical know-how to get things set up. Some businesses aren't even sure if AI is relevant to them.",
+      'We started this company after seeing one challenge come up again and again: growing businesses are buried in manual work, disconnected tools, and time-consuming workarounds.',
+      "At the same time, AI and automation are evolving fast. But for many growth-stage companies, these tools still feel out of reach. Their time is limited, they rarely have space to explore what's possible and they often lack the resources or technical know-how to get things set up. Some businesses aren't even sure if AI is relevant to them.",
       "We know there is a better way and that's how Daita Dynamics was born.",
-      "Since 2020, we've worked across industries helping businesses unlock the full potential of AI by connecting data, automating repetitive tasks, and turning insights into action. With a background in data engineering, automation, and user experience, we focus on making AI approachable and useful for teams that want to do more without adding overhead or complexity.",
+      "Since 2020, we've worked across industries helping businesses unlock the full potential of AI by connecting data, automating repetitive tasks, and turning insights into action. With a background in data engineering, automation, and user experience, we focus on making AI approachable and useful for teams that want to scale without adding overhead or complexity.",
       'What drives us is knowing our work helps people save time, avoid bottlenecks, and focus on what matters most. We are here to help you work smarter with AI and systems that support your growth every step of the way.',
     ],
     founder: {
@@ -165,7 +210,7 @@ export const siteContent = {
     headline: 'Ready to unlock AI in your business?',
     description: "Great, that's the spirit! Schedule a call and get a AI Opportunity Assessment of your business.",
     email: 'cade@daitadynamics.com',
-    calendlyUrl: 'https://calendly.com/daitadynamics/strategy-call',
+    calendlyUrl: 'https://calendly.com/cade-daitadynamics/new-meeting',
     testimonial: {
       quote: "I couldn't recommend Cade enough. Through the code he has written we have been able to avoid hiring for 3 positions and the rest of our team is more efficient than ever.",
       author: 'Kevin P.',

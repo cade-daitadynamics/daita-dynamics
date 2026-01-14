@@ -7,6 +7,7 @@ interface ServiceCardProps {
   description: string
   icon: 'data' | 'automation' | 'ai'
   index: number
+  useCases?: readonly string[]
 }
 
 const icons = {
@@ -55,7 +56,7 @@ const icons = {
   ),
 }
 
-export function ServiceCard({ title, description, icon, index }: ServiceCardProps) {
+export function ServiceCard({ title, description, icon, index, useCases }: ServiceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -83,6 +84,26 @@ export function ServiceCard({ title, description, icon, index }: ServiceCardProp
 
       {/* Description */}
       <p className="text-slate-600 leading-relaxed">{description}</p>
+
+      {/* Use Cases */}
+      {useCases && useCases.length > 0 && (
+        <ul className="mt-6 space-y-2">
+          {useCases.map((useCase, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-slate-500">
+              <svg
+                className="w-4 h-4 text-brand-cyan flex-shrink-0 mt-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>{useCase}</span>
+            </li>
+          ))}
+        </ul>
+      )}
 
       {/* Hover gradient accent */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand-purple/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

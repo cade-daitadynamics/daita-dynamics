@@ -31,6 +31,7 @@ export function Services() {
             description={service.description}
             icon={service.icon as 'data' | 'automation' | 'ai'}
             index={index}
+            useCases={service.useCases}
           />
         ))}
       </div>

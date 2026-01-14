@@ -2,6 +2,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
 import { ProblemStatement } from '@/components/sections/ProblemStatement'
+import { Difference } from '@/components/sections/Difference'
 import { Approach } from '@/components/sections/Approach'
 import { Services } from '@/components/sections/Services'
 import { SuccessStories } from '@/components/sections/SuccessStories'
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <ProblemStatement />
+        <Difference />
         <Approach />
         <Services />
         <SuccessStories />
