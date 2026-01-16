@@ -1,2 +1,4 @@
 node_modules
 trees/
+node_modules/
+.next/
